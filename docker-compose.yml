@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  node:
+      build:
+        context: .
+        dockerfile: Dockerfile/DockerfileNodeDevelop
+      env_file:
+        - variables.env
+      ports:
+        - "3000:3000"
+      links:
+        - mongodb
+      volumes:
+        - node_modules:/app/node_modules
+        - ./server:/app/server
+        - ./config:/app/config
+        - ./yarn.lock:/app/yarn.lock
+        - ./package.json:/app/package.json
+      container_name: Dev-Node
+      command: yarn run dev
+
+  mongodb:
+      image: mongo:3.4.10
+      ports:
+        - "27017:27017"
+      container_name: Dev-MongoDB
+      logging:
+        driver: "none"
+
+volumes:
+  node_modules:
+    driver: local

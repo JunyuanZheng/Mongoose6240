@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "config": "1.30.0",
+    "express": "4.16.3",
+    "helmet": "3.12.0",
+    "mongoose": "5.0.10"
+  },
+  "devDependencies": {
+    "@types/mongoose": "5.0.7",
+    "@types/node": "9.4.7",
+    "applicationinsights-js": "1.0.15",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.4",
+    "nodemon": "1.17.2",
+    "ts-node": "5.0.1",
+    "typescript": "2.7.2"
+  },
+  "private": true,
+  "scripts": {
+    "dev":
+      "yarn install && TS_NODE_PROJECT=./server nodemon --watch server --exec ts-node ./server/src/index.ts"
+  }
+}

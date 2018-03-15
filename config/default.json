@@ -1,0 +1,10 @@
+{
+  "DATABASE": {
+    "MONGODB": {
+      "HOST": "mongodb"
+    }
+  },
+  "SERVER": {
+    "URL": "https://localhost:8081"
+  }
+}

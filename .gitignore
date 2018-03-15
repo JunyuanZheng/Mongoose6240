@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+
+# IntelliJ IDEA directories
+\.idea/
+*.iml
+
+# MacOS System
+.DS_Store
+
+# npm-debug log
+npm-debug.log
+
+# production build
+dist/
+
+# next.js framework
+\.next/
+
+# serverless framework
+\.serverless/
